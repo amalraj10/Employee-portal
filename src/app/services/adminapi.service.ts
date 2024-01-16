@@ -24,4 +24,13 @@ export class AdminapiService {
 getAllEmployeeApi(){
   return this.http.get(`${this.server_URL}/employee`)
 }
+
+deleteEmployeeApi(id:string) {
+  return this.http.delete(`${this.server_URL}/employee/${id}`);
+}
+
+viewEmployeeApi(id:string){
+  return this.http.get(`${this.server_URL}/employee/${id}`)
+}
+
 }

@@ -34,5 +34,19 @@ allEmployee(){
   })
 }
 
+removeemployee(id:any){
+  this.api.deleteEmployeeApi(id).subscribe({
+    next:(res:any)=>{
+      console.log(res);
+      this.allEmployee()
+      
+    },
+    error:(err:any)=>{
+      console.log(err);
+      
+    }
+  })
+}
+
 
 }
